@@ -1,6 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: ["./hamout/**/*.{html,js,ts,tsx}"],
+  content: ["./hamout/**/*.{html,js,ts,tsx}", 'node_modules/preline/dist/*.js',
+  ],
   // theme: {
   //   colors: {
   //     'blue': '#1fb6ff',
@@ -30,6 +31,7 @@ export default {
   plugins: [
     require('@tailwindcss/forms'),
     require('@tailwindcss/typography'),
+    require('preline/plugin'),
   ]
 }
 
