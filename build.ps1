@@ -1,5 +1,5 @@
 # Compile TypeScript
-tsc
+./node_modules/.bin/tsc
 
 # Copy directory recursively
 Copy-Item -Path "node_modules\@boudev\magicui\" -Destination ".\assets\magicui" -Recurse -Force
