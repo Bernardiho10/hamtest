@@ -168,6 +168,7 @@ UpdatedAt = new TextMagicElement("updated_at")
 
 TenantsTable = new TableMagicElement("tenants")        
 .ShowColumns("label:id,name,email,phone,address,created_at:tenant_rent_start, updated_at:tenant_rent_due")
+.AddClass("border-collapse border border-slate-400")
 
 OutstandingRentTable = new TableMagicElement("outsanding_rent")
 IncomingRentTable = new TableMagicElement("incoming_rent")
