@@ -2,7 +2,7 @@
 		"name": "invoicer",
 		"version": "1.0.0",
 		"scripts": {
-    "build": "powershell -ExecutionPolicy ByPass -File \"C:\\Users\\User\\Desktop\\youtube\\ham\\invoicer\\build.ps1\""
+				"build": "powershell -ExecutionPolicy ByPass -File \"C:\\Users\\User\\Desktop\\youtube\\ham\\invoicer\\build.ps1\""
 		},
 		"description": "",
 		"type": "module",
@@ -15,6 +15,6 @@
 				"@tailwindcss/forms": "^0.5.7",
 				"@tailwindcss/typography": "^0.5.13",
 				"tailwindcss": "^3.4.7",
-				"typescript": "^5.5.4"
+				"typescript": "^5.6.0-dev.20240805"
 		}
 }

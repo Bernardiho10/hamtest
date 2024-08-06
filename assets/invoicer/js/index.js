@@ -1,0 +1,2 @@
+alert('HElllo world!');
+export {};
