@@ -13,7 +13,7 @@ const data =
             "updated_at": "2022-01-02 14:00:00",
             "tenants": [
                 {
-                    "id": 1,
+                    "tenant_id": 1,
                     "name": "John Doe",
                     "email": "john.doe@example.com",
                     "phone": "123-456-7890",
@@ -22,7 +22,7 @@ const data =
                     "updated_at": "2022-01-02 14:00:00"
                 },
                 {
-                    "id": 2,
+                    "tenant_id": 2,
                     "name": "Jane Doe",
                     "email": "jane.doe@example.com",
                     "phone": "987-654-3210",
@@ -153,10 +153,11 @@ const data =
             ]
         }
 
-new class ViewModel extends BaseViewModel {
+
+new class viewModel extends BaseViewModel {
 
     
-ID = new TextMagicElement("id")
+ID = new TextMagicElement("id", "tenant_id")
 NumProperties = new TextMagicElement("num_properties")
 NumTenants = new TextMagicElement("num_tenants")
 NumUnits = new TextMagicElement("num_units")
@@ -166,9 +167,13 @@ LateRent = new TextMagicElement("late_rent")
 CreatedAt = new TextMagicElement("created_at")
 UpdatedAt = new TextMagicElement("updated_at")
 
-TenantsTable = new TableMagicElement("tenants")        
-.ShowColumns("label:id,name,email,phone,address,created_at:tenant_rent_start, updated_at:tenant_rent_due")
-.AddClass("border-collapse border border-slate-400")
+TenantsTable = new TableMagicElement("tenants")
+        .ShowColumns("label:id,name,email,phone,address,created_at, updated_at")
+        .AddClass("table table-hover table-bordered table-striped mt-3 min-w-full divide-y divide-gray-200 dark:divide-neutral-700")
+        .SetCellLink("address", "/properties/property.html?id=[id]")
+        // .SetTransformer(this.listTransformer)
+        // .SetRowEvent("dblclick", this.showPropertyDetails)
+        // .AddRowAction("delete", "id", this.deleteProperty);
 
 OutstandingRentTable = new TableMagicElement("outsanding_rent")
 IncomingRentTable = new TableMagicElement("incoming_rent")
